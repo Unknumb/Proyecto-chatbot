@@ -23,5 +23,10 @@
 - Django
 - MySQL
 
+## Cronograma de desarrollo
+- **Semana 1-3**: Diseño del chatbot y planificación inicial
+- **Semana 4**: Capacitación en tecnologías (Python, Django, API OpenAI)
+- **Semana 5**: Inicio del desarrollo de software (Backend y Frontend)
+
 ## Estado actual
-DISEÑO DEL CHATBOT
+DESARROLLO DE SOFTWARE - BACKEND Y FRONTEND
