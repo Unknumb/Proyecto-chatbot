@@ -28,6 +28,7 @@
 - **Semana 1-3**: Diseño del chatbot y planificación inicial
 - **Semana 4**: Capacitación en tecnologías (HTML, CSS, JavaScript, Ollama)
 - **Semana 5**: Inicio del desarrollo de la interfaz y conexión con Ollama
+- **Semana 6**: Planificación y organización detallada (creación de tabla de proyecto y carta Gantt)
 
 ## Estado actual
 DESARROLLO DE SOFTWARE - FRONTEND Y CONEXIÓN CON OLLAMA
