@@ -20,9 +20,9 @@
 - HTML
 - CSS
 - JavaScript
-- Ollama
+- Gemma o meodelo a conveniencia.
 - WebGPU API
-- MySQL
+- MySQL -en evualuacion
 
 ## Cronograma de desarrollo
 - **Semana 1-3**: Diseño del chatbot y planificación inicial
@@ -31,4 +31,4 @@
 - **Semana 6**: Planificación y organización detallada (creación de tabla de proyecto y carta Gantt)
 
 ## Estado actual
-DESARROLLO DE SOFTWARE - FRONTEND Y CONEXIÓN CON OLLAMA
+DESARROLLO DE SOFTWARE - FRONTEND Y CONEXIÓN CON EL MODELO DE INTELEGENCIA ARTIFICIAL
