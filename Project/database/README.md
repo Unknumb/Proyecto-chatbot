@@ -1,21 +1,19 @@
 # Base de Datos del Chatbot
 
-Esta carpeta contiene los scripts y configuración de la base de datos del chatbot.
+Este directorio contiene los scripts y configuración de la base de datos para el chatbot.
 
 ## Estructura
 
-- `migrations/`: Scripts de migración de la base de datos
-- `scripts/`: Scripts SQL para la inicialización de la base de datos
-- `models/`: Modelos de la base de datos (si se usa ORM)
-
-## Tecnologías
-
-- MySQL / PostgreSQL / MongoDB / SQLite (elegir según preferencia)
+- `schema.sql`: Define la estructura de la base de datos
+- `seed.sql`: Datos iniciales para la base de datos
+- `migrations/`: Scripts de migración para actualizar la base de datos
 
 ## Configuración
 
-Instrucciones para configurar la base de datos.
+1. Crear una base de datos con el nombre `chatbot_db`
+2. Ejecutar el script `schema.sql`
+3. Ejecutar el script `seed.sql`
 
-## Inicialización
+## Migraciones
 
-Instrucciones para inicializar la base de datos.
+Para actualizar la base de datos a una nueva versión, ejecutar los scripts de migración en orden cronológico.
