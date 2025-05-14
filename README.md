@@ -27,6 +27,9 @@
 - **Semana 1-3**: Diseño del chatbot y planificación inicial
 - **Semana 4**: Capacitación en tecnologías (Python, Django, API OpenAI)
 - **Semana 5**: Inicio del desarrollo de software (Backend y Frontend)
+- **Semana 6**: creacion carta gantt
+- **Semana 7**: cumpliendo deberes carta gantt y mejoras del proyecto 
+ 
 
 ## Estado actual
-DESARROLLO DE SOFTWARE - BACKEND Y FRONTEND
+Mejorando nuestro proyecto
