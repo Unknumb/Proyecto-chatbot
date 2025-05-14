@@ -13,23 +13,23 @@
 Álvaro Uribe
 
 ## Roles
-- **Álvaro Uribe**: Backend y Frontend
-- **Nicolás Hölck**: Backend y Frontend
+- **Álvaro Uribe**: Frontend y desarrollo del chatbot
+- **Nicolás Hölck**: Frontend y desarrollo del chatbot
 
 ## Tecnologías a usar
-- Python
-- GitHub
-- API OpenAI
-- Django
-- MySQL
+- HTML
+- CSS
+- JavaScript
+- Gemma o meodelo a conveniencia.
+- WebGPU API
+- MySQL -en evualuacion
 
-## Cronograma de desarrollo
-- **Semana 1-3**: Diseño del chatbot y planificación inicial
-- **Semana 4**: Capacitación en tecnologías (Python, Django, API OpenAI)
-- **Semana 5**: Inicio del desarrollo de software (Backend y Frontend)
-- **Semana 6**: creacion carta gantt
+=======
+- **Semana 4**: Capacitación en tecnologías (HTML, CSS, JavaScript, Ollama)
+- **Semana 5**: Inicio del desarrollo de la interfaz y conexión con Ollama
+- **Semana 6**: Planificación y organización detallada (creación de tabla de proyecto y carta Gantt)
 - **Semana 7**: cumpliendo deberes carta gantt y mejoras del proyecto 
- 
 
 ## Estado actual
 Mejorando nuestro proyecto
+

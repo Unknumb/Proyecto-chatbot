@@ -1,25 +1,39 @@
 # Frontend del Chatbot
 
-Esta carpeta contiene el código del frontend del chatbot.
+Este directorio contiene la interfaz de usuario del chatbot.
 
 ## Estructura
 
-- `src/`: Código fuente
-- `components/`: Componentes de la interfaz de usuario
-- `pages/`: Páginas de la aplicación
-- `assets/`: Recursos estáticos (imágenes, CSS, etc.)
-- `services/`: Servicios para comunicarse con el backend
-- `utils/`: Utilidades
-
-## Tecnologías
-
-- HTML / CSS / JavaScript
-- React / Vue / Angular (elegir según preferencia)
+- `src/`: Código fuente de la aplicación
+  - `components/`: Componentes reutilizables
+  - `pages/`: Páginas de la aplicación
+  - `styles/`: Estilos CSS/SCSS
+  - `utils/`: Utilidades y funciones auxiliares
+- `public/`: Archivos estáticos
+- `tests/`: Pruebas automatizadas
 
 ## Instalación
 
-Instrucciones para instalar las dependencias del frontend.
+```bash
+npm install
+```
 
 ## Ejecución
 
-Instrucciones para ejecutar el frontend.
+```bash
+npm start
+```
+
+La aplicación estará disponible en http://localhost:3000
+
+## Build
+
+```bash
+npm run build
+```
+
+## Tests
+
+```bash
+npm test
+```

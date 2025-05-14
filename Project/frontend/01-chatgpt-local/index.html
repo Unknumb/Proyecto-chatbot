@@ -193,14 +193,18 @@
             })
 
             let reply = ""
+
             const $botMessage = addMessage("", 'bot')
             
             for await (const chunk of chunks) {
                 const [choice] = chunk.choices
+
                 const content = choice.delta.content ?? ""
                 reply += content
                 // Aplicar formato Markdown en cada actualización
                 $botMessage.innerHTML = formatMarkdown(reply)
+
+
             }
 
             $button.removeAttribute('disabled')
@@ -212,19 +216,27 @@
         })
 
         function addMessage(text, sender) {
+
+
+            //clonar el template
             const clonedTemplate = $template.content.cloneNode(true)
+
+
             const $newMessage = clonedTemplate.querySelector('.message')
             const $who = $newMessage.querySelector('span')
             const $text = $newMessage.querySelector('p')
+
 
             $text.innerHTML = formatMarkdown(text)
             $who.textContent = sender == 'bot' ? 'GPT' : 'Tu'
             $newMessage.classList.add(sender)
 
+
             $messages.appendChild($newMessage)
             $container.scrollTop = $container.scrollHeight
 
             return $text
+
         }
 
         function formatMarkdown(text) {
@@ -233,6 +245,7 @@
                 .replace(/\*(.*?)\*/g, '<em>$1</em>')               // Itálicas
                 .replace(/`{3}([\s\S]*?)`{3}/g, '<pre><code>$1</code></pre>') // Bloques de código
                 .replace(/`(.*?)`/g, '<code>$1</code>')             // Código en línea
+
         }
     </script>
 
