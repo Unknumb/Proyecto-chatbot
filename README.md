@@ -18,7 +18,7 @@
 
 ## Tecnologías a usar
 - HTML
-  <img src="https://github.com/user-attachments/assets/cd98f72d-72b0-41a6-b816-8e4670af2018" width="80"
+  <img src="https://github.com/user-attachments/assets/cd98f72d-72b0-41a6-b816-8e4670af2018" width="100"
     height="100"/>
 
 
