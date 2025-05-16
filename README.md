@@ -26,7 +26,7 @@
    <img src="https://github.com/user-attachments/assets/91195500-4103-4c45-906f-9c3f30d5ee89" width="100"
     height="100"/>
 - JavaScript
-  <img src="https://github.com/user-attachments/assets/6e2039a1-eac4-4e68-8fbc-16b6b46d8bc3" width="150"
+  <img src="https://github.com/user-attachments/assets/6e2039a1-eac4-4e68-8fbc-16b6b46d8bc3" width="155"
     height="100"/>
 - Gemma o meodelo a conveniencia.
 - <img src="https://github.com/user-attachments/assets/fcf4d3ce-4693-4cdb-aaca-3b7b3a6b3f10" width="100"
