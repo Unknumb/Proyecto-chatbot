@@ -33,6 +33,9 @@
     height="100"/>
 
 - WebGPU API
+- <img src="https://github.com/user-attachments/assets/aa0ad4c0-99fe-4429-b2ad-bac51d21bba7" width="100"
+  height="100">
+
 - MySQL -en evualuacion
 
 ## Progreso Semanal
