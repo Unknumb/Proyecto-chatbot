@@ -42,7 +42,10 @@
 - **Semana 4**: Capacitación en tecnologías (HTML, CSS, JavaScript, Ollama)
 - **Semana 5**: Inicio del desarrollo de la interfaz y conexión con Ollama
 - **Semana 6**: Planificación y organización detallada (creación de tabla de proyecto y carta Gantt)
-- **Semana 7**: cumpliendo deberes carta gantt y mejoras del proyecto 
+- **Semana 7**: cumpliendo deberes carta gantt y mejoras del proyecto
+
+## Licencia
+**MIT LICENCE**
 
 ## Estado actual
 Mejorando nuestro proyecto
