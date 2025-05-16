@@ -1,5 +1,8 @@
 # Proyecto-chatbot
 
+  <img src="https://github.com/user-attachments/assets/4741a755-d751-48f2-9bdf-a91a61b4fb37" width="100"
+    height="100"/>
+
 ## Descripción del proyecto
 - Nuestra idea es hacer un chatbot como Deepseek o Chat-GPT, el cual intentaremos hacer todo lo posible de 0 para crear nuestro propio diseño y que el chatbot tenga un prompt único.
 - Utilizaremos metodología scrum y kanban.
