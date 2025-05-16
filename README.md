@@ -17,7 +17,8 @@
 - **Nicolás Hölck**: Frontend y desarrollo del chatbot
 
 ## Tecnologías a usar
-- HTML
+- HTML![image](https://github.com/user-attachments/assets/9f6fcb9a-3e79-4ce8-ac2a-8538efea350b)
+
 - CSS
 - JavaScript
 - Gemma o meodelo a conveniencia.
