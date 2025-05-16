@@ -25,6 +25,10 @@
 - CSS
 - JavaScript
 - Gemma o meodelo a conveniencia.
+- img src="https://github.com/user-attachments/assets/fcf4d3ce-4693-4cdb-aaca-3b7b3a6b3f10
+" width="100"
+    height="100"/>
+
 - WebGPU API
 - MySQL -en evualuacion
 
