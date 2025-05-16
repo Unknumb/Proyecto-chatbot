@@ -1,5 +1,5 @@
 # Proyecto-chatbot 
- <img src="https://github.com/user-attachments/assets/4741a755-d751-48f2-9bdf-a91a61b4fb37" width="300"
+<img src="https://github.com/user-attachments/assets/4741a755-d751-48f2-9bdf-a91a61b4fb37" width="300"
     height="300"/>
 
 ## Descripción del proyecto
@@ -7,16 +7,12 @@
 - Utilizaremos metodología scrum y kanban.
 - Las asignaturas que se vinculan son ingeniería de requisitos, desarrollo full stack y base de datos.
 
-## Integrantes
-- Álvaro Uribe
-- Nicolás Hölck
+## Equipo de Trabajo
 
-## Lider del grupo
-Álvaro Uribe
-
-## Roles
-- **Álvaro Uribe**: Frontend y desarrollo del chatbot
-- **Nicolás Hölck**: Frontend y desarrollo del chatbot
+| Nombre | Cargo | Roles | 
+|--------|-------|-------|
+| Álvaro Uribe | Líder del Proyecto | Frontend y desarrollo del chatbot |
+| Nicolás Hölck | Integrante | Frontend y desarrollo del chatbot |
 
 ## Tecnologías a usar
 - HTML
@@ -51,4 +47,3 @@
 
 ## Estado actual
 Mejorando nuestro proyecto
-
