@@ -1,8 +1,7 @@
-import { MLCEngineWorkerHandler, MCLEngine} from "https://esm.run/@mlc-ai/web-llm"
+import { WebWorkerMLCEngineHandler } from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.46/+esm"
 
-const engine = new MCLEngine()
-const handler = new MLCEngineWorkerHandler(engine)
+const handler = new WebWorkerMLCEngineHandler()
 
-onmessage = msg => {
+self.onmessage = (msg) => {
     handler.onmessage(msg)
 }

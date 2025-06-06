@@ -55,6 +55,9 @@
 - **Semana 5**: Inicio del desarrollo de la interfaz y conexión con Ollama
 - **Semana 6**: Planificación y organización detallada (creación de tabla de proyecto y carta Gantt)
 - **Semana 7**: Cumpliendo deberes carta Gantt y mejoras del proyecto
+- **Semana 8**: Avance técnico del proyecto
+- **Semana 9**: Semana de evaluación con presentación
+- **Semana 10**: Desarrollo de funcionalidades adicionales
 
 ## Licencia
 **MIT LICENCE**
