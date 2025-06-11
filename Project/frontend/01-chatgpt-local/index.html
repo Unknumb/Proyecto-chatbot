@@ -30,13 +30,6 @@
                 background-size: 100% 100%;
             }
         }
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 100px;
-            height: 100px;
-        }
 
         .logo {
             position: absolute;
@@ -47,17 +40,15 @@
         }
 
         main {
-            width: 400px;
+            width: min(400px, 90vw);
             max-width: 100%;
-            height: 70vh;
-
+            height: min(70vh, 600px);
             background: #ffff;
             border: 1px solid #cccc;
             border-radius: 4px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 8px;
             margin-bottom: 16px;
-
             overflow-y: auto;
             scroll-behavior: smooth;
         }
@@ -67,7 +58,6 @@
             flex-direction: column;
             list-style: none;
             padding: 0;
-
         }
 
         .message {
@@ -76,80 +66,84 @@
             gap: 4px;
             margin: 4px 0;
             padding: 4px 8px;
+        }
 
-            > span {
-                width: 36px;
-                height: 36px;
-                background: #eee;
-                font-size: 12px;
-                font-weight: 500;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 999999px;
-            }
+        .message > span {
+            width: 36px;
+            height: 36px;
+            background: #eee;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 999999px;
+        }
 
-            > p {
-                border-radius: 4px;
-                padding: 4px 8px;
-                margin-top: 8px;
-            }
+        .message > p {
+            border-radius: 4px;
+            padding: 4px 8px;
+            margin-top: 8px;
+        }
 
-            &.user {
-                align-self: flex-end;
-                align-items: flex-end;
-                span, p{
-                    background: rgb(200, 185, 244);
-                }
-            }
+        .message.user {
+            align-self: flex-end;
+            align-items: flex-end;
+        }
 
-            &.bot {
-                align-self: flex-start;
-                span, p {
-                background: rgb(168, 183, 253);
-                }
-            } 
+        .message.user span,
+        .message.user p {
+            background: rgb(200, 185, 244);
+        }
+
+        .message.bot {
+            align-self: flex-start;
+        }
+
+        .message.bot span,
+        .message.bot p {
+            background: rgb(168, 183, 253);
         }
 
         form {
             display: flex;
+        }
 
-            input {
-                border-radius: 999999px;
-                flex-grow: 1;
-                border: 0;
-                padding: 8px;
-                margin-right: 8px;
-                border: 1px solid #ccc;
-            }
+        form input {
+            border-radius: 999999px;
+            flex-grow: 1;
+            border: 0;
+            padding: 8px;
+            margin-right: 8px;
+            border: 1px solid #ccc;
+        }
 
-            button {
-                background: #09f;
-                border: 0;
-                color: white;
-                border-radius: 6px;
-                cursor: pointer;
-                padding: 8px;
-                transition: background .3s ease;
+        form button {
+            background: #09f;
+            border: 0;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 8px;
+            transition: background .3s ease;
+        }
 
-                &[disabled] {
-                    background: #ccc;
-                    opacity: .6;
-                    pointer-events: none;
-                }
+        form button[disabled] {
+            background: #ccc;
+            opacity: .6;
+            pointer-events: none;
+        }
 
-                &:hover {
-                    background: rgb(0, 104, 173);
-                }
+        form button:hover {
+            background: rgb(0, 104, 173);
+        }
 
-                &.stop {
-                    background: #f44336 !important;
-                }
+        form button.stop {
+            background: #f44336 !important;
+        }
 
-                &.stop:hover {
-                    background: #d32f2f !important;
-                }
-            }
+        form button.stop:hover {
+            background: #d32f2f !important;
         }
 
         small {
@@ -164,15 +158,16 @@
         }
 
         .loading {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        height: 100%;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 50%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50%;
+        }
 
-        i {
+        .loading i {
             pointer-events: none;
             width: 2.5em;
             height: 2.5em;
@@ -183,23 +178,68 @@
             animation: loadingspin 1s linear infinite;
         }
 
-        h4 {
+        .loading h4 {
             color: #444;
             margin-bottom: 8px;
         }
 
-        h5 {
+        .loading h5 {
             font-weight: 400;
             margin: 0;
             font-size: 10px;
             opacity: .4;
         }
-        }
-
 
         @keyframes loadingspin {
             100% {
                 transform: rotate(360deg)
+            }
+        }
+
+        /* Añadido: Mejoras para experiencia táctil */
+        button, input {
+            touch-action: manipulation;
+        }
+
+        /* Media queries para responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+                height: auto;
+                min-height: 100dvh;
+                animation: none;
+                background: #a5b6ff;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+                top: 10px;
+                left: 10px;
+            }
+
+            main {
+                width: 100%;
+                height: 60vh;
+                margin-bottom: 12px;
+            }
+
+            form {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            form input {
+                margin-right: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            small {
+                width: 90%;
+                position: static;
+                margin-top: 12px;
+                text-align: center;
             }
         }
     </style>
