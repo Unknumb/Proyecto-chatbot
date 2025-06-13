@@ -40,9 +40,9 @@
         }
 
         main {
-            width: min(400px, 90vw);
+            width: min(500px, 90vw);
             max-width: 100%;
-            height: min(70vh, 600px);
+            height: min(80vh, 600px);
             background: #ffff;
             border: 1px solid #cccc;
             border-radius: 4px;
@@ -53,11 +53,31 @@
             scroll-behavior: smooth;
         }
 
+          /* Logo de fondo translúcido */
+        main::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background-image: url('/Project/frontend/images/logo chatboooot.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.1; /* Ajusta la opacidad según necesites */
+            z-index: 0; /* Para que quede detrás del contenido */
+            pointer-events: none; /* Para que no interfiera con los clicks */
+        }
+
         ul {
             display: flex;
             flex-direction: column;
             list-style: none;
             padding: 0;
+            position: relative;
+            z-index: 1;
         }
 
         .message {
@@ -242,6 +262,7 @@
                 text-align: center;
             }
         }
+        
     </style>
     <script type="module">
         import { CreateWebWorkerMLCEngine } from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.46/+esm"
