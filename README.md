@@ -43,8 +43,8 @@
         <img src="https://github.com/user-attachments/assets/aa0ad4c0-99fe-4429-b2ad-bac51d21bba7" width="100" height="100">
       </td>
       <td align="center">
-        <strong>MySQL</strong><br>
-        <em>(en evaluación)</em>
+        <strong>Llama</strong><br>
+        <em>Modelo de IA</em>
       </td>
     </tr>
   </table>
@@ -58,6 +58,8 @@
 - **Semana 8**: Avance técnico del proyecto
 - **Semana 9**: Semana de evaluación con presentación
 - **Semana 10**: Desarrollo de funcionalidades adicionales
+- **Semana 11**: 
+- **Semana 12**: 
 
 ## Licencia
 **MIT LICENCE**
