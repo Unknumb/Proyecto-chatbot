@@ -58,8 +58,8 @@
 - **Semana 8**: Avance técnico del proyecto
 - **Semana 9**: Semana de evaluación con presentación
 - **Semana 10**: Desarrollo de funcionalidades adicionales
-- **Semana 11**: 
-- **Semana 12**: 
+- **Semana 11**: Mejoras y cursos de microsft Learn
+- **Semana 12**: Avances en microsoft Learn
 
 ## Licencia
 **MIT LICENCE**
