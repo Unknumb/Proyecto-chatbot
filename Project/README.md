@@ -5,7 +5,6 @@ Este proyecto implementa un chatbot interactivo que se ejecuta completamente en 
 ## Estructura del Proyecto
 
 - `frontend/`: Contiene la interfaz de usuario del chatbot y toda la lógica de la aplicación
-- `docs/`: Contiene la documentación del proyecto
 
 ## Tecnologías Utilizadas
 
