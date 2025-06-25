@@ -4,411 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatBot epico</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 
-            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background: radial-gradient(circle at center, 
-                        #e0e8ff 0%, 
-                        #c9d4ff 30%, 
-                        #a5b6ff 60%, 
-                        #c9d4ff 90%);
-            display: grid;
-            place-content: center;
-            height: 100dvh;
-            animation: gradientPulse 15s ease infinite alternate;
-        }
-
-        @keyframes gradientPulse {
-            0% {
-                background-size: 100% 100%;
-            }
-            50% {
-                background-size: 150% 150%;
-            }
-            100% {
-                background-size: 100% 100%;
-            }
-        }
-
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 100px;
-            height: 100px;
-        }
-
-        main {
-            width: min(500px, 90vw);
-            max-width: 100%;
-            height: min(80vh, 600px);
-            background: #ffff;
-            border: 1px solid #cccc;
-            border-radius: 4px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 8px;
-            margin-bottom: 16px;
-            overflow-y: auto;
-            scroll-behavior: smooth;
-        }
-
-          /* Logo de fondo translúcido */
-        main::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150px;
-            height: 150px;
-            background-image: url('/Project/frontend/images/logo chatboooot.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.1; /* Ajusta la opacidad según necesites */
-            z-index: 0; /* Para que quede detrás del contenido */
-            pointer-events: none; /* Para que no interfiera con los clicks */
-        }
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            list-style: none;
-            padding: 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .message {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin: 4px 0;
-            padding: 4px 8px;
-        }
-
-        .message > span {
-            width: 36px;
-            height: 36px;
-            background: #eee;
-            font-size: 12px;
-            font-weight: 500;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 999999px;
-        }
-
-        .message > p {
-            border-radius: 4px;
-            padding: 4px 8px;
-            margin-top: 8px;
-        }
-
-        .message.user {
-            align-self: flex-end;
-            align-items: flex-end;
-        }
-
-        .message.user span,
-        .message.user p {
-            background: rgb(200, 185, 244);
-        }
-
-        .message.bot {
-            align-self: flex-start;
-        }
-
-        .message.bot span,
-        .message.bot p {
-            background: rgb(168, 183, 253);
-        }
-
-        form {
-            display: flex;
-        }
-
-        form input {
-            border-radius: 999999px;
-            flex-grow: 1;
-            border: 0;
-            padding: 8px;
-            margin-right: 8px;
-            border: 1px solid #ccc;
-        }
-
-        form button {
-            background: #09f;
-            border: 0;
-            color: white;
-            border-radius: 6px;
-            cursor: pointer;
-            padding: 8px;
-            transition: background .3s ease;
-        }
-
-        form button[disabled] {
-            background: #ccc;
-            opacity: .6;
-            pointer-events: none;
-        }
-
-        form button:hover {
-            background: rgb(0, 104, 173);
-        }
-
-        form button.stop {
-            background: #f44336 !important;
-        }
-
-        form button.stop:hover {
-            background: #d32f2f !important;
-        }
-
-        small {
-            font-size: 10px;
-            color: #555;
-            position: fixed;
-            bottom: 10px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 400px;
-        }
-
-        .loading {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            height: 100%;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 50%;
-        }
-
-        .loading i {
-            pointer-events: none;
-            width: 2.5em;
-            height: 2.5em;
-            border: 0.4em solid transparent;
-            border-color: #eee;
-            border-top-color: #3e9eec;
-            border-radius: 50%;
-            animation: loadingspin 1s linear infinite;
-        }
-
-        .loading h4 {
-            color: #444;
-            margin-bottom: 8px;
-        }
-
-        .loading h5 {
-            font-weight: 400;
-            margin: 0;
-            font-size: 10px;
-            opacity: .4;
-        }
-
-        @keyframes loadingspin {
-            100% {
-                transform: rotate(360deg)
-            }
-        }
-
-        /* Añadido: Mejoras para experiencia táctil */
-        button, input {
-            touch-action: manipulation;
-        }
-
-        /* Media queries para responsive */
-        @media (max-width: 600px) {
-            body {
-                padding: 16px;
-                height: auto;
-                min-height: 100dvh;
-                animation: none;
-                background: #a5b6ff;
-            }
-
-            .logo {
-                width: 60px;
-                height: 60px;
-                top: 10px;
-                left: 10px;
-            }
-
-            main {
-                width: 100%;
-                height: 60vh;
-                margin-bottom: 12px;
-            }
-
-            form {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            form input {
-                margin-right: 0;
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            small {
-                width: 90%;
-                position: static;
-                margin-top: 12px;
-                text-align: center;
-            }
-        }
-        
-    </style>
-    <script type="module">
-        import { CreateWebWorkerMLCEngine } from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.46/+esm"
-
-        const $ = el => document.querySelector(el)
-
-        // pongo delante de la variable un símbolo de $
-        // para indicar que es un elemento del DOM
-        const $form = $('form')
-        const $input = $('input')
-        const $template = $('#message-template')
-        const $messages = $('ul')
-        const $container = $('main')
-        const $button = $('button')
-        const $info = $('small')
-        const $loading = $('.loading')
-
-        let messages = []
-        let end = false
-        let isGenerating = false
-        let currentGeneration = null
-
-        const SELECTED_MODEL = 'Llama-3-8B-Instruct-q4f32_1-MLC-1k'
-
-        const engine = await CreateWebWorkerMLCEngine(
-        new Worker('./worker.js', { type: 'module' }),
-        SELECTED_MODEL,
-        {
-            initProgressCallback: (info) => {
-                $info.textContent = info.text
-                    if(info.progress === 1 && !end) {
-                    end = true
-                    $loading?.parentNode?.removeChild($loading)
-                    $button.removeAttribute('disabled')
-                    addMessage("¡Hola! Soy un ChatBot que se ejecuta completamente en tu navegador. ¿En qué puedo ayudarte hoy?", 'bot')
-                    $input.focus()
-                    }
-                }
-            }
-        )
-
-        $form.addEventListener('submit', async (event) => {
-            event.preventDefault()
-            const messageText = $input.value.trim()
-
-            if(messageText === '' || isGenerating) return
-
-            $input.value = ''
-            $input.setAttribute('disabled', '') // 👈 Deshabilitar input
-            addMessage(messageText, 'user')
-            
-            $button.textContent = 'Stop'
-            $button.classList.add('stop')
-            isGenerating = true
-
-            const userMessage = {
-                role : 'user',
-                content: messageText
-            }
-
-            messages.push(userMessage)
-
-            try {
-                currentGeneration = engine.chat.completions.create({
-                    messages,
-                    stream: true
-                })
-
-                const chunks = await currentGeneration
-
-                let reply = ""
-                const $botMessage = addMessage("", 'bot')
-                
-                for await (const chunk of chunks) {
-                    if (!isGenerating) break
-                    
-                    const [choice] = chunk.choices
-
-                    const content = choice?.delta?.content ?? ""
-                    reply += content
-                    $botMessage.innerHTML = formatMarkdown(reply)
-                }
-
-                messages.push({
-                    role: 'assistant',
-                    content: reply
-                })
-            } finally {
-                isGenerating = false
-                currentGeneration = null
-                $button.textContent = 'Enviar'
-                $button.classList.remove('stop')
-                $input.removeAttribute('disabled') // 👈 Habilitar input
-                $container.scrollTop = $container.scrollHeight
-            }
-        })
-
-        $button.addEventListener('click', function(event) {
-            if (isGenerating) {
-                event.preventDefault()
-                isGenerating = false
-                $button.textContent = 'Enviar' //
-                $button.classList.remove('stop') //
-                $input.removeAttribute('disabled') // 👈 Habilitar input si se cancela
-            }
-        })
-
-        function addMessage(text, sender) {
-            const clonedTemplate = $template.content.cloneNode(true)
-
-            const $newMessage = clonedTemplate.querySelector('.message')
-            const $who = $newMessage.querySelector('span')
-            const $text = $newMessage.querySelector('p')
-
-            $text.innerHTML = formatMarkdown(text)
-            $who.textContent = sender == 'bot' ? 'GPT' : 'Tu'
-            $newMessage.classList.add(sender)
-
-            $messages.appendChild($newMessage)
-            $container.scrollTop = $container.scrollHeight
-
-            return $text
-        }
-
-        function formatMarkdown(text) {
-            return text
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                .replace(/\*(.*?)\*/g, '<em>$1</em>')
-                .replace(/`{3}([\s\S]*?)`{3}/g, '<pre><code>$1</code></pre>')
-                .replace(/`(.*?)`/g, '<code>$1</code>')
-        }
-    </script>
-
+    <link rel="stylesheet" href="/Project/frontend/01-chatgpt-local/styles.css">
     <link rel="icon" href="/Project/frontend/images/logo chatboooot.png">
 </head>
 <body>
-    <!-- CREAR NUESTRO CHAT GPT-->
     <!--PRUEBA AUTOMATIZACIOOOON-->
     <img class="logo" src="/Project/frontend/images/logo chatboooot.png" alt="Logo del ChatBot">
-    
     <main>
         <ul>
             <li class="loading">
                 <i></i>
                 <h4>Cargandooooo</h4>
-                <h5>Esto puede tardar un poquito.</h5>
+                <h5>Esto puede tardar un poco.</h5>
             </li>
         </ul>
     </main>
@@ -417,6 +24,15 @@
         <input placeholder="Escribe tu mensaje aqui">
         <button disabled>Enviar</button>
     </form>
+
+
+    <button id="clear-history" class="delete-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h18"></path>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+        </svg>
+        Borrar Historial
+    </button>
 
     <small>&nbsp;</small>
 
@@ -427,5 +43,8 @@
         </li>
     </template>
 
+    <script type="module" src="/Project/frontend/01-chatgpt-local/script.js"></script>
+
+    <!--PRUEBA dsadad-->
 </body>
 </html>
