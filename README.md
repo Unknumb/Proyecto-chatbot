@@ -67,3 +67,9 @@
 ## Estado actual
 Mejorando nuestro proyecto
 
+## Despliegue
+El proyecto está desplegado y disponible en GitHub Pages. Puedes acceder a la aplicación en el siguiente enlace:
+
+🚀 **[Ver Proyecto en Vivo](https://unknumb.github.io/Proyecto-chatbot/)**
+
+El despliegue se actualiza automáticamente cada vez que se realizan cambios en la rama main del repositorio.
